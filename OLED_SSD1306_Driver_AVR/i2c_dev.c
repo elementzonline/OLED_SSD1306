@@ -10,7 +10,7 @@ void InitI2C(void)
   DDRC &= ~(BIT0|BIT1);
   //PORTC |= (BIT0|BIT1);   // commented since the module has on board pullup
   
-  TWBR = 0x00;                                        //SCL hz value set (250 khz) for fast mode
+  TWBR = 0x0F;                                        //SCL hz value set (250 khz) for fast mode
   //TWBR = 0x5F;                                        //SCL hz value set (77 khz) for strd mode
   TWSR = 0x00;                                        //prescalar value set(4)
 }
