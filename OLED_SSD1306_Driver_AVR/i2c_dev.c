@@ -19,7 +19,7 @@ void InitI2C(void)
 int start_i2c_transmission(void)
 {
   TWCR = (BIT7|BIT6|BIT5|BIT2);       //Send start condition of I2C                         
-  while(!(TWCR & BIT7));              //wait untill start condition send operation 
+  while(!(TWCR & BIT7));              //wait untill start condition send operation  
   if ((TWSR & 0xF8) != START)
   {
     return -1;                       // start not transmitted
